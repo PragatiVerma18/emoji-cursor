@@ -1,0 +1,42 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #2980b9;
+  color:#ecf0f1;
+  text-align: center;
+}
+
+main{
+  border: 1px solid #bdc3c7;
+  cursor: pointer;
+  max-width: 60%;
+  padding: 1.5rem 2rem;
+  position: relative;
+  font-family: fantasy;
+  font-size: 50px;
+}
+
+.hoverup .hoverdown{
+  position: absolute;
+  top: -102%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(2);
+  transform-origin: 50% 100%;
+}
+
+.hoverdown{
+  top: 102%;
+}
+
+.hoverup:hover{
+cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='64' height='77' viewport='0 0 100 100' style='fill:black;font-size:38px;'><text y='50%'>😀</text></svg>") 16 0,auto; 
+
+}
+
+.hoverdown:hover{
+  cursor:url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Emoji_u1f610.svg/128px-Emoji_u1f610.svg.png"),pointer;
+}
