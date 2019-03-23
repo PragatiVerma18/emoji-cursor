@@ -1,42 +1,60 @@
 body{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #2980b9;
-  color:#ecf0f1;
+  background-color: #641E16;
+  background-image: url("https://www.dealfuel.com/wp-content/uploads/2015/06/extracolor4-1024x5761.png");
   text-align: center;
+  background-size: cover;
+  background-blend-mode: lighten;
 }
 
-main{
-  border: 1px solid #bdc3c7;
+.happy, .rocket{
+  border: 5px solid #bdc3c7;
+  border-radius: 25px;
   cursor: pointer;
   max-width: 60%;
   padding: 1.5rem 2rem;
   position: relative;
   font-family: fantasy;
   font-size: 50px;
+  margin: 50px;
 }
 
-.hoverup .hoverdown{
+.happy:hover{
+cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='64' height='77' viewport='0 0 100 100' style='fill:black;font-size:38px;'><text y='50%'>😀</text></svg>") 16 0,auto;
+}
+.rocket:hover{
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='64' height='77' viewport='0 0 100 100' style='fill:black;font-size:38px;'><text y='50%'>🚀</text></svg>") 16 0,auto;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 3px dotted yellow;
+  color: white;
+}
+
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
   position: absolute;
-  top: -102%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  transform: scaleX(2);
-  transform-origin: 50% 100%;
+  z-index: 1;
 }
-
-.hoverdown{
-  top: 102%;
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
-
-.hoverup:hover{
-cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='64' height='77' viewport='0 0 100 100' style='fill:black;font-size:38px;'><text y='50%'>😀</text></svg>") 16 0,auto; 
-
+.happy{
+  color:#17202A;
 }
-
-.hoverdown:hover{
-  cursor:url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Emoji_u1f610.svg/128px-Emoji_u1f610.svg.png"),pointer;
+.rocket{
+  color:#CA6F1E;
 }
